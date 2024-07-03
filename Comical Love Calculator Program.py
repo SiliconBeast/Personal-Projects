@@ -1,7 +1,7 @@
 print("The Love Calculator is calculating your score...")
 name1 = "S"#"What is your name? "
 name2 = "A"#What is their name? "
-# Write your code below this line 👇
+
 added_name = name1 + name2
 lower_name = added_name.lower()
 t = lower_name.count("t")
