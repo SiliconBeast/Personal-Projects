@@ -1,0 +1,51 @@
+import sympy as sp
+import matplotlib.pyplot as plt
+import numpy as np
+
+def main():
+    # Get the user input for the function
+    expression_str = input("Enter a mathematical function in terms of 'x': ")
+    
+    # Define the variable and the function
+    x = sp.symbols('x')
+    expression = sp.sympify(expression_str)
+    
+    # Calculate derivative and integral
+    derivative = sp.diff(expression, x)
+    integral = sp.integrate(expression, x)
+
+    # Convert the expressions to Python functions
+    func = sp.lambdify(x, expression, 'numpy')
+    deriv_func = sp.lambdify(x, derivative, 'numpy')
+    integral_func = sp.lambdify(x, integral, 'numpy')
+
+    # Generate x values for plotting
+    x_values = np.linspace(-10, 10, 400)
+
+    # Evaluate the functions for the given x values
+    y_values = func(x_values)
+    deriv_values = deriv_func(x_values)
+    integral_values = integral_func(x_values)
+    
+    print("Derivative of the function: ",derivative)
+    print("Integration of the function: ",integral)
+
+    # Plot the functions
+    plt.figure(figsize=(10, 6))
+    plt.plot(x_values, y_values, label="Original Function")
+    plt.plot(x_values, deriv_values, label="Derivative")
+    plt.plot(x_values, integral_values, label="Integral")
+    
+    # Add labels and legend
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.title("Function, Derivative, and Integral")
+    plt.legend()
+
+    # Show the plot
+    plt.grid(True)
+    plt.show()
+
+if _name_ == "_main_":
+    main()
+
