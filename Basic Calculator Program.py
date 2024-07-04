@@ -1,6 +1,6 @@
 #lets make a basic calculator in python!
 import os
-
+# let's start by defining functions of the calculator
 def add(n1, n2):
     return n1 + n2
 
