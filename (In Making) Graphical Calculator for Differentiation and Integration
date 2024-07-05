@@ -4,7 +4,7 @@
 #Educational Tool: Designed for math students to comprehend calculus concepts visually.
 #Slope and Accumulated Area: Shows the connection between the original function, its derivative (slope), and integral (accumulated area).
 #Visual Aid: Simplifies analysis by presenting all three functions together, aiding in the study of calculus relationships.
-
+### THE PROJECT WAS DEVELOPED IN A HACKATHON WITH MY TEAMMATES :) ###
 
 import sympy as sp
 import matplotlib.pyplot as plt
