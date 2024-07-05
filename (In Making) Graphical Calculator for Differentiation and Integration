@@ -1,9 +1,9 @@
 #Integral & Derivative: Integral represents the area under the curve; derivative represents the rate of change.
-Combined Graph: Original function, derivative, and integral overlapped on one graph.
-Overlap for Analysis: Facilitates comparison of functions at each point for visual understanding.
-Educational Tool: Designed for math students to comprehend calculus concepts visually.
-Slope and Accumulated Area: Shows the connection between the original function, its derivative (slope), and integral (accumulated area).
-Visual Aid: Simplifies analysis by presenting all three functions together, aiding in the study of calculus relationships.
+#Combined Graph: Original function, derivative, and integral overlapped on one graph.
+#Overlap for Analysis: Facilitates comparison of functions at each point for visual understanding.
+#Educational Tool: Designed for math students to comprehend calculus concepts visually.
+#Slope and Accumulated Area: Shows the connection between the original function, its derivative (slope), and integral (accumulated area).
+#Visual Aid: Simplifies analysis by presenting all three functions together, aiding in the study of calculus relationships.
 
 
 import sympy as sp
