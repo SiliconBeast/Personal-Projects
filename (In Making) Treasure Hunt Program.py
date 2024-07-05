@@ -33,7 +33,7 @@ else:
         print("You open the blue door and save yourself by plunging in the pool....but don't be too happy")
     if choice1 == "Green":
         print("You open the green door and was instantly attacked by hungry alligators who chomp you down")
-print("Okay now go and do some work")
+print("Okay now go and create your own game dude")
     
     
     
