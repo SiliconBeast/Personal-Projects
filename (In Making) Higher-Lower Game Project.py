@@ -12,3 +12,11 @@ print('''         __
 /_____/\____/|__/|__/\___/_/
 ''')
 
+integer = randint(a)
+print("Guess the Number! ")
+guess = input("Number to be guessed")
+if integer < guess:
+   print("Too Low")
+elif integer > guess:
+   print("Too High")
+
