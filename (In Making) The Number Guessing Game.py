@@ -24,4 +24,11 @@ def number_guessed():
         elif guess == number_guessed:
             print("You guessed the right number!!!")
             return
+                    attempts -=1 
+        if attempts > 0:
+            print(f"You have {attempts} attempts remaining")
+        else:
+            print("You have run out of the attempts player :( ") 
+            print(f"The number was {number_guessed}")   
+number_guessed()
         
