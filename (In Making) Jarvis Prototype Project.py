@@ -1,6 +1,5 @@
 # Jarvis in process :)
-# Jarvis in process :)
-
+# Made with online help and previous knowledge
 import speech_recognition as sr 
 import webbrowser
 import pyttsx3
