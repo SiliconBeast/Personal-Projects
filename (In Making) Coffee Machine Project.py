@@ -27,18 +27,17 @@ MENU = {
 
 profit = 0 #initial money is zero
 resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100
+    "water": 3000,
+    "milk": 2000,
+    "coffee": 1000
 }
 
 # now we will define a function that shows there are not enough ingredients
 def is_resource_sufficient(order_ingredients):
-    is_enough = True
     for item in order_ingredients:
-        if order_ingredients[item] >= resources[item]:
-            print("Sorry, there is not have enough {item}.")
-            is_enough = False
+        if order_ingredients[item] > resources[item]:
+            print(f"Sorry, there is not have enough {item}.")
+            return False
     return True
 
 def process_coins():
@@ -60,9 +59,10 @@ def is_transaction_successful(money_received, drink_cost):
         print("Sorry, that's is not enough money. Money refunded back!")
         return False
 
-def make_coffee(drink_name, order_ingredients):
+def make_coffee(drink_name, order_ingredients): #deducts the ingredients after each order
     for item in order_ingredients:
-        
+        resources[item] -= order_ingredients[item]
+    print(f"Here is your {drink_name}☕. Have a great one!!!")
 
 machine_is_on = True
 while machine_is_on:
@@ -79,4 +79,6 @@ while machine_is_on:
         if is_resource_sufficient(drink["ingredients"]):
             payment = process_coins()
             if is_transaction_successful(payment,drink["cost"]):
-                make_coffee()
+                make_coffee(choice, drink["ingredients"])
+
+
