@@ -42,10 +42,10 @@ def is_resource_sufficient(order_ingredients):
 
 def process_coins():
     print("Welcome to the Coffee Hub, Please insert coins.")
-    total = int(input("how many quarters?: "))*0.25
-    total += int(input("how many dimes?: "))*0.1
-    total += int(input("how many nickels?: "))*0.05
-    total += int(input("how many pennies?: "))*0.01
+    total = int(input("Insert quarters?: "))*0.25
+    total += int(input("Insert dimes?: "))*0.1
+    total += int(input("Insert nickels?: "))*0.05
+    total += int(input("Insert pennies?: "))*0.01
     return total
 
 def is_transaction_successful(money_received, drink_cost):
@@ -65,8 +65,9 @@ def make_coffee(drink_name, order_ingredients): #deducts the ingredients after e
     print(f"Here is your {drink_name}☕. Have a great one!!!")
 
 machine_is_on = True
+
 while machine_is_on:
-    choice = input("What would you like to drink today? (espresso/latte/cappuccino): ")
+    choice = input("What would you like to drink today? (espresso/latte/cappuccino): ").lower()
     if choice == "off":
         machine_is_on = False
     elif choice == "report":
@@ -74,13 +75,12 @@ while machine_is_on:
         print(f"Coffee: {resources['coffee']}g")
         print(f"Water: {resources['water']}ml")
         print(f"Money: ${profit}")
-    elif choice != "espresso" or choice != "latte" or choice != "cappuccino":
-        print("Invalid Choice. Please select again.")
-    else:
+    elif choice in MENU:
         drink = MENU[choice]
         if is_resource_sufficient(drink["ingredients"]):
             payment = process_coins()
-            if is_transaction_successful(payment,drink["cost"]):
+            if is_transaction_successful(payment, drink["cost"]):
                 make_coffee(choice, drink["ingredients"])
-
+    else:
+        print("Invalid Choice. Please select again.")
 
