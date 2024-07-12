@@ -74,6 +74,8 @@ while machine_is_on:
         print(f"Coffee: {resources['coffee']}g")
         print(f"Water: {resources['water']}ml")
         print(f"Money: ${profit}")
+    elif choice != "espresso" or choice != "latte" or choice != "cappuccino":
+        print("Invalid Choice. Please select again.")
     else:
         drink = MENU[choice]
         if is_resource_sufficient(drink["ingredients"]):
