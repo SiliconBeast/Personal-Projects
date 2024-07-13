@@ -1,4 +1,4 @@
-# coffee machine code
+# coffee machine code dictionary below
 MENU = {
     "espresso": {
         "ingredients": {
@@ -40,6 +40,7 @@ def is_resource_sufficient(order_ingredients):
             return False
     return True
 
+# function created to process the coins inserted to calculate the total amount    
 def process_coins():
     print("Welcome to the Coffee Hub, Please insert coins.")
     total = int(input("Insert quarters?: "))*0.25
@@ -48,6 +49,7 @@ def process_coins():
     total += int(input("Insert pennies?: "))*0.01
     return total
 
+# this function makes sure that the transaction is successful then only the drink is processed else the money is returned back.
 def is_transaction_successful(money_received, drink_cost):
     if money_received >= drink_cost:
         change = round(money_received - drink_cost, 2)
@@ -59,7 +61,8 @@ def is_transaction_successful(money_received, drink_cost):
         print("Sorry, that's is not enough money. Money refunded back!")
         return False
 
-def make_coffee(drink_name, order_ingredients): #deducts the ingredients after each order
+#deducts the ingredients after each order
+def make_coffee(drink_name, order_ingredients): 
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name}☕. Have a great one!!!")
