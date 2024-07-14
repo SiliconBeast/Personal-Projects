@@ -7,16 +7,6 @@
 
 - 🌱 I’m currently learning **Python, C++, SQL, PowerBI**
 
-- 👯 I’m looking to collaborate on **Projects**
-
-- 🤝 I’m looking for help with **DSA**
-
-- 👨‍💻 All of my projects are available at [github](github)
-
-- 📝 I regularly write articles on [https://linkedin.com/in/suvirduggal](linkedIn)
-
-- 💬 Ask me about **Python**
-
 - 📫 How to reach me **suvir1@ualberta.ca**
 
 - ⚡ Fun fact **I love flight simulators :)**
