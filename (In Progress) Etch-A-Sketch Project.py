@@ -1,10 +1,15 @@
-# We are creating etch-a-sketch using the turtle in python
-# this takes in the input from the user and rotates the turtle as per the different inputs
-
 from turtle import Turtle, Screen
 
 tim = Turtle()
+tim.pensize(3)
 screen = Screen()
+
+# Create a turtle for writing the title
+title_turtle = Turtle()
+title_turtle.hideturtle()
+title_turtle.penup()
+title_turtle.goto(0, screen.window_height()//2 - 40)
+title_turtle.write("Etch A Sketch - Python Version", align="center", font=("Arial", 24, "bold"))
 
 def move_forwards():
     tim.forward(10)
@@ -30,7 +35,6 @@ screen.listen()
 screen.onkey(move_forwards, "w")
 screen.onkey(move_backwards, "s")
 screen.onkey(turn_left, "a")
-screen.onkey(turn_right, "d")
-screen.onkey(clear, "c")
+screen.onkey(turn_right(), "d")
+screen.onkey(clear(), "c")
 screen.exitonclick()
-
