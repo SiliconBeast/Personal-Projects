@@ -4,12 +4,20 @@ tim = Turtle()
 tim.pensize(3)
 screen = Screen()
 
-# Create a turtle for writing the title
+# Create the turtle for writing the title
 title_turtle = Turtle()
 title_turtle.hideturtle()
 title_turtle.penup()
 title_turtle.goto(0, screen.window_height()//2 - 40)
 title_turtle.write("Etch A Sketch - Python Version", align="center", font=("Arial", 24, "bold"))
+
+# Create the turtle for writing the controls
+title_turtle = Turtle()
+title_turtle.hideturtle()
+title_turtle.penup()
+title_turtle.goto(0, screen.window_height()//2 - 80)
+title_turtle.write("Controls: WASD and C for Clear Screen", align="center", font=("Arial", 20, "bold"))
+
 
 def move_forwards():
     tim.forward(10)
@@ -35,6 +43,6 @@ screen.listen()
 screen.onkey(move_forwards, "w")
 screen.onkey(move_backwards, "s")
 screen.onkey(turn_left, "a")
-screen.onkey(turn_right(), "d")
-screen.onkey(clear(), "c")
+screen.onkey(turn_right, "d")
+screen.onkey(clear, "c")
 screen.exitonclick()
