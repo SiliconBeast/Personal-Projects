@@ -1,3 +1,5 @@
+# refers to the main code
+
 import time
 from turtle import Screen
 from player import Player
