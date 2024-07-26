@@ -1,3 +1,5 @@
+# addition of comments is necessary :)
+# random module is imported along with turtle
 from turtle import Turtle
 import random
 class Food (Turtle):
