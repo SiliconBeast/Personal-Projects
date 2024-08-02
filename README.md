@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on **Web Development and Learning New Skills**
 
-- 🌱 I’m currently learning **Python, C++, SQL, PowerBI**
+- 🌱 I’m currently learning **Python, SQL, PowerBI**
 
 - 📫 How to reach me **suvir1@ualberta.ca**
 
