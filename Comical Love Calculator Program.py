@@ -1,6 +1,6 @@
 #lol this is just a fun program I learnt in a Python course based on some internet article.
 #not to be taken seriously in any means :P
-# also added a ascii art 
+# also added an ASCII art 
 
 print('''
                         __,,,__
