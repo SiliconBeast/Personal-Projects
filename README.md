@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Suvir</h1>
-<h3 align="center">A passionate engineering student in Edmonton</h3>
+<h3 align="center">Just a Computer Engineering student in Edmonton</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=siliconbeast&label=Profile%20views&color=0e75b6&style=flat" alt="siliconbeast" /> </p>
 
