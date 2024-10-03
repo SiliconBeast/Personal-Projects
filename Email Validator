@@ -1,0 +1,47 @@
+# We start with specifying the lists of domains which are allowed and which are restricted
+allowed_domain_suffixes = [".com", ".org", ".net", ".edu", ".gov", ".ca"]
+forbidden_domains = ['scam', 'spam', 'fakeemail', 'trashmail', 'pleasenotspam', 'therealtaylorswift', 'sendmoney']
+
+def validate_email(email):
+    # Add your implementation in here
+    # now we check for only one "@" symbol
+    if email.count('@') != 1:
+        return "Invalid"
+    
+    # Split the email into local part and domain part
+    local_part, domain_part = email.split('@')
+    
+    # Validate local part: it should only contain letters, digits, periods, or dashes
+    if not all(c.isalnum() or c in ('.', '-') for c in local_part):
+        return "Invalid"
+    
+    # Check if the domain part contains a period
+    if '.' not in domain_part:
+        return "Invalid"
+    
+    # Split the domain part into second-level domain and top-level domain
+    second_level_domain, tld = domain_part.rsplit('.', 1)
+    
+    # Add a period to the TLD and check if it is in the allowed TLD list
+    tld = '.' + tld
+    if tld not in allowed_domain_suffixes:
+        return "Invalid"
+    
+    # Check if the second-level domain is forbidden
+    if second_level_domain in forbidden_domains:
+        return "Forbidden"
+    
+    # If all validations pass, return "Valid"
+    return "Valid"
+pass
+
+def main():
+    # Takes in the input and stores the email addresses in a list
+    emails = list(input().split())
+
+    # Validate each email here
+    for email in emails:
+        print(validate_email(email)) # print the result of the validation by using the def function used in the start
+
+if __name__ == "__main__":
+    main()
